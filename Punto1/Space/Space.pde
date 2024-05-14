@@ -1,8 +1,8 @@
-private Shooter nave;
-private Asteroide asteroideI;
-private Asteroide asteroideC;
-private Asteroide asteroideD;
-private JoyPad joyPad;
+Shooter nave;
+Asteroide asteroideI;
+Asteroide asteroideC;
+Asteroide asteroideD;
+JoyPad joyPad;
 
 public void setup(){
   size(1000, 750);
