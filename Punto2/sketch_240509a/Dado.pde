@@ -1,7 +1,7 @@
 class Dado extends GameObject{
   private int valor;
   
-  public Dado(){    
+  public Dado(){
   }
   
   public void display(){
@@ -47,7 +47,6 @@ class Dado extends GameObject{
   }
   
   public void dar(int nroDado){
-    //numeros = new int [n];
     if(nroDado == 1){
       this.valor = nroDado;
     }
@@ -66,6 +65,10 @@ class Dado extends GameObject{
     if(nroDado == 6){
       this.valor = nroDado;
     }
+  }
+  
+  public int getValor(){
+    return this.valor;
   }
   
 }

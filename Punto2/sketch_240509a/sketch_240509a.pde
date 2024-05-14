@@ -1,11 +1,9 @@
-Tablero tablero;
-Dado dado;
-//int n;
+private Tablero tablero;
+private Dado dado;
 
 public void setup(){
   size(1000, 600);
   background(0);
-  //n = 0;
   dado = new Dado();
   tablero = new Tablero();
   tablero.posicion = new PVector(50, 75);  
@@ -14,13 +12,13 @@ public void setup(){
 
 public void draw(){
   tablero.display();
-  dado.display();
+  dado.display();;
 }
 
 public void mousePressed(){
   if(mouseButton == LEFT){
     dado.dar(int(random(1, 7)));
-    //n += 1;
+    tablero.nombrar(dado.getValor());
   }
   if(mouseButton == RIGHT){
     exit();
