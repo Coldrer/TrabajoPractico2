@@ -1,6 +1,7 @@
-Shooter nave;
-Asteroide asteroideC;
-JoyPad joyPad;
+private Shooter nave;
+private Asteroide asteroideC;
+private JoyPad joyPad;
+private HUD hud;
 
 public void setup(){
   size(1000, 750);
@@ -11,8 +12,9 @@ public void setup(){
   asteroideC = new Asteroide();
   asteroideC.setPosicion(new PVector(width/2, 0));
   asteroideC.setDireccion(new PVector(0,5));
-  joyPad = new JoyPad();
   
+  joyPad = new JoyPad();
+  hud = new HUD();
 }
 
 public void draw(){
@@ -20,6 +22,7 @@ public void draw(){
   nave.display();
   asteroideC.display();
   asteroideC.mover();
+  hud.display();
 }
 
 public void keyPressed(){

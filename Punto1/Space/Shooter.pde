@@ -1,6 +1,8 @@
 class Shooter extends GameObject{
+  private int cantVidas;
   
   public Shooter(){
+    cantVidas = 3;
     imagen = loadImage("Shooter.jpg");
   }
   
@@ -11,6 +13,10 @@ class Shooter extends GameObject{
   
   public void mover(){
     
+  }
+  
+  public int getVidas(){
+    return this.cantVidas;
   }
   
 }
