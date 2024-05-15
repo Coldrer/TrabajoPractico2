@@ -1,7 +1,5 @@
 Shooter nave;
-Asteroide asteroideI;
 Asteroide asteroideC;
-Asteroide asteroideD;
 JoyPad joyPad;
 
 public void setup(){
@@ -10,12 +8,8 @@ public void setup(){
   nave = new Shooter();
   nave.setPosicion(new PVector(width/2, height - 150));
   
-  asteroideI = new Asteroide();
   asteroideC = new Asteroide();
-  asteroideD = new Asteroide();
-  asteroideI.setPosicion(new PVector(width/4, 0));
   asteroideC.setPosicion(new PVector(width/2, 0));
-  asteroideD.setPosicion(new PVector(width-(width/4),0));
   asteroideC.setDireccion(new PVector(0,5));
   joyPad = new JoyPad();
   
@@ -25,7 +19,6 @@ public void draw(){
   background(0);
   nave.display();
   asteroideC.display();
-  
   asteroideC.mover();
 }
 

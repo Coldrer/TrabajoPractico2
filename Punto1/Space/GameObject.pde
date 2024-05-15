@@ -3,18 +3,9 @@ abstract class GameObject{
   protected PImage imagen;
   protected PVector direccion;
   
-  public void display(){
-    imageMode(CENTER);
-    image(imagen, posicion.x, posicion.y, 100, 100);
-  }
+  public abstract void display();  
   
-  public void mover(){
-    if(this.posicion.y <= height){
-      this.posicion.y += this.direccion.y;
-    }else{
-      this.posicion.y = 0;
-    }
-  }
+  public abstract void mover();
   
   public PVector getPosicion(){
     return this.posicion;
